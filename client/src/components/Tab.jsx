@@ -3,6 +3,7 @@ import { useSnapshot } from 'valtio'
 import state from '../store'
 
 
+
 const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
 
   const snap = useSnapshot(state);
@@ -12,7 +13,7 @@ const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
   : {backgroundColor: "transparent", opacity: 1}
 
   return (
-
+<div className='pb-8'>
     <div
       key={tab.name}
       className={`tab-btn ${isFilterTab ? 'rounded-full glassmorphism' : 'rounded-4'}`}
@@ -26,7 +27,7 @@ const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
       />
 
     </div>
-
+    </div>
   )
 }
 

@@ -16,7 +16,7 @@ const CameraRig = ({ children }) => {
 
   useEffect(() => {
     const canvas = gl.domElement
-
+    
     const handleMouseDown = (e) => {
       isDragging.current = true
       lastPos.current = { x: e.clientX, y: e.clientY }
@@ -89,6 +89,7 @@ const CameraRig = ({ children }) => {
       canvas.removeEventListener('touchstart', handleTouchStart)
       canvas.removeEventListener('touchmove', handleTouchMove)
       canvas.removeEventListener('touchend', handleTouchEnd)
+      
     }
   }, [gl])
 
