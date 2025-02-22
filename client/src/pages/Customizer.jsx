@@ -61,7 +61,7 @@ const Customizer = () => {
     try {
       setGeneratingImg(true);
 
-      const response = await fetch('http://localhost:5000/api/v1/stability', {
+      const response = await fetch('https://threedshirtai-uuqd.onrender.com//api/v1/stability', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
